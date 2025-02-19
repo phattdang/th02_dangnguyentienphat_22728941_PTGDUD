@@ -19,6 +19,8 @@ function BaiTap2() {
 
     return (
         <>
+            <span>bai tap 2</span>
+            <br />
             <input onChange={handleInputA} placeholder="a" type="text" />
             <br />
             <input onChange={handleInputB} placeholder="b" type="text" />

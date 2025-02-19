@@ -14,10 +14,10 @@ function BaiTap3() {
         setBValue(e.target.value);
     }
     const handleInputResult = (e) => {
-        if(op === '+') setResult(parseInt(aValue) + parseInt(bValue));
-        else if(op === '-') setResult(parseInt(aValue) - parseInt(bValue));
-        else if(op === '*') setResult(parseInt(aValue) * parseInt(bValue));
-        else if(op === '/') setResult(parseInt(aValue) / parseInt(bValue));
+        if (op === '+') setResult(parseInt(aValue) + parseInt(bValue));
+        else if (op === '-') setResult(parseInt(aValue) - parseInt(bValue));
+        else if (op === '*') setResult(parseInt(aValue) * parseInt(bValue));
+        else if (op === '/') setResult(parseInt(aValue) / parseInt(bValue));
     }
     const getOp = (e) => {
         setOp(e.target.value);
@@ -26,17 +26,19 @@ function BaiTap3() {
 
     return (
         <>
+            <span>bai tap 3</span>
+            <br />
             <input onChange={handleInputA} placeholder="a" type="text" />
             <br />
             <input onChange={handleInputB} placeholder="b" type="text" />
             <br />
             <div>
-                <input onChange={getOp} type="radio" name="op" id="" value={"+"}/> <span>+</span>
-                <input onChange={getOp} type="radio" name="op" id="" value={"-"}/> <span>-</span>
+                <input onChange={getOp} type="radio" name="op" id="" value={"+"} /> <span>+</span>
+                <input onChange={getOp} type="radio" name="op" id="" value={"-"} /> <span>-</span>
             </div>
             <div>
-            <input onChange={getOp} type="radio" name="op" id="" value={"*"}/> <span>*</span>
-                <input onChange={getOp} type="radio" name="op" id="" value={"/"}/> <span>/</span>
+                <input onChange={getOp} type="radio" name="op" id="" value={"*"} /> <span>*</span>
+                <input onChange={getOp} type="radio" name="op" id="" value={"/"} /> <span>/</span>
             </div>
             <button onClick={handleInputResult} >calculate</button>
             <br />

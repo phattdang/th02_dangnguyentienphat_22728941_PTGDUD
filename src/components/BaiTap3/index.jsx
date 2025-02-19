@@ -14,10 +14,14 @@ function BaiTap3() {
         setBValue(e.target.value);
     }
     const handleInputResult = (e) => {
-        
+        if(op === '+') setResult(parseInt(aValue) + parseInt(bValue));
+        else if(op === '-') setResult(parseInt(aValue) - parseInt(bValue));
+        else if(op === '*') setResult(parseInt(aValue) * parseInt(bValue));
+        else if(op === '/') setResult(parseInt(aValue) / parseInt(bValue));
     }
     const getOp = (e) => {
-        setOp(e);
+        setOp(e.target.value);
+        console.log(op);
     }
 
     return (
